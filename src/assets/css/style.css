@@ -1,0 +1,258 @@
+.navbar {
+    padding-left: 99px;
+    padding-right: 99px;
+    background-color: #2F6CE5;
+}
+.navbar-light .navbar-brand {
+    color: #ffffff;
+}
+.navbar-light .navbar-nav .active>.nav-link {
+    color: #ffffff;
+}
+.popular-tiles-child {
+    height: 45px;
+    background-color: rgba(0,0,0,0.8);
+}
+.popular-tiles-child h1 {
+    font-size: 1.5rem;
+    color: white;
+    padding: 0 100px;
+    /* padding-top: 5px; */
+}
+footer {
+    position: fixed;
+    width: 100%;
+}
+footer {
+    bottom: 0;
+}
+.tabs {
+    min-height: 415px;
+}
+.tabs-child {
+    margin: 20px 100px;
+}
+.series,
+.movies {
+    display: inline-block;
+    text-align: center;
+    vertical-align: text-top;
+}
+.series a,
+.movies a {
+    width: 150px;
+    height: 250px;
+    /* background-color: #000000; */
+    margin: 10px;
+    color: #ffffff;
+    font-size: 1.5rem;
+    /* background-image: url(../images/movie-icon.png); */
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+}
+.movies-home a,
+.series-home a {
+    background-color: #000000;
+    background-image: url(../images/movie-icon.png);
+    background-size: 70%;
+}
+.footer-child3,
+.series a,
+.movies a,
+.social-icons div,
+.popular-tiles-child {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    align-items: center;
+    justify-content: center;
+    -webkit-justify-content: center;
+}
+.popular-tiles-child {
+    justify-content: flex-start;
+    -webkit-justify-content: flex-start;
+    -webkit-box-shadow: 0 2px 5px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: 0 2px 5px 0px rgba(0,0,0,0.5);
+    box-shadow: 0 2px 5px 0px rgba(0,0,0,0.5);
+}
+
+.footer-child3 {
+    justify-content: space-between;
+    -webkit-justify-content: space-between;
+}
+.series h2,
+.movies h2 {
+    font-size: 1rem;
+    text-align: left;
+    margin: 0 10px;
+    width: 150px;
+}
+.series a:hover, .movies a:hover {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: #000000;
+    padding: 50px 100px;
+}
+.footer-child1 ul {
+    padding: 0;
+}
+.footer-child1 ul li {
+    display: inline-block;
+    padding-left: 10px;
+    cursor: pointer;
+}
+.footer-child2 p {
+    padding-left: 10px;
+}
+.footer-child1 ul li,
+.footer-child2 p {
+    color: #bbbbbb;
+}
+.social-icons i {
+    font-size: 24px;
+    color: #ffffff;
+    margin: 10px;
+}
+.social-download {
+    text-align: right;
+}
+.social-download a {
+    margin: 10px;
+}
+.social-download a img {
+    width: 150px;
+    height: 50px;
+}
+.social-download a:first-child img {
+    height: 47px;
+}
+.social-download a:last-child img {
+    height: 46px;
+}
+
+@media screen and (max-width: 767px) {
+    .tabs-child {
+        margin: 0 15px;
+    }
+    .footer {
+        padding: 50px 15px;
+    }
+    .popular-tiles {
+        padding-top: 56px;
+    }
+    .popular-tiles-child h1 {
+        padding: 0 15px;
+        /* padding-top: 5px; */
+    }
+    .navbar {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    footer {
+        position: relative;
+    }
+    .tabs {
+        padding-top: 5px;
+        min-height: 300px;
+    }
+    .navbar {
+        position: fixed;
+        width: 100%;
+    }
+    .footer-child3 {
+        flex-direction: column;
+    }
+    .social-download {
+        text-align: center;
+    }
+    .social-download div {
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -moz-box;
+        align-items: center;
+    }
+    .social-download a {
+        margin: 5px;
+    }
+    .social-download a img {
+        width: 115px;
+        height: 40px;
+    }
+    .social-download a:first-child img {
+        height: 38px;
+    }
+    .social-download a:last-child img {
+        height: 37px;
+    }
+}
+@media screen and (max-width: 380px) {
+    .social-download a img {
+        width: 90px;
+        height: 32px;
+    }
+    .social-download a:first-child img {
+        height: 30px;
+    }
+    .social-download a:last-child img {
+        height: 29px;
+    }
+}
+@media screen and (max-width: 370px) {
+    .series a, .movies a {
+        width: 120px;
+        height: 180px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .navbar {
+        position: relative;
+    }
+    .popular-tiles {
+        padding-top: 0;
+    }
+    .popular-tiles-child h1 {
+        font-size: 0.8rem;
+    }
+    .navbar-brand {
+        font-size: 1rem;
+    }
+    .series a, .movies a {
+        width: 100px;
+        height: 160px;
+    }
+    .social-download div {
+        flex-direction: column;
+    }
+    .social-download a {
+        margin: 10px;
+    }
+    .social-download a img {
+        width: 150px;
+        height: 50px;
+    }
+    .social-download a:first-child img {
+        height: 47px;
+    }
+    .social-download a:last-child img {
+        height: 46px;
+    }
+    .tabs {
+        padding-top: 10px;
+    }
+    .series a, .movies a {
+        width: 80px;
+        height: 120px;
+    }
+    .series h2, .movies h2 {
+        font-size: 0.6rem;
+    }
+    .tabs {
+        min-height: 200px;
+    }
+}
