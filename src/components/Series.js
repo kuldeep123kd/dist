@@ -54,7 +54,7 @@ class Series extends React.Component {
                     const backimg = post.images["Poster Art"].url;
                     return (
                       <div className="series" key={key}>
-                          <a href="/" style={{ backgroundImage:`url(${backimg})` }}>
+                          <a href="/dist" style={{ backgroundImage:`url(${backimg})` }}>
                           </a>
                           <h2>{post.title}</h2>
                       </div>
