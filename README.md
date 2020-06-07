@@ -23,7 +23,7 @@ Your app is ready to be deployed!
 
 To deploy the react app on Github pages.
 
-========================================================================================================================================
+
 (1). As i previously worked on bootstrap, jquery. So i have decided to use bootstrap, for the alignment, postioning, etc. of the              component should look proper on the view. I used hash router to support legacy browsers, and to configure the server to work with        BrowserHistory. I also used jquery. On architectural level i created different components for differnet views like for header,          footer, home page, series page, movie page so that the we can use the components anywhere in the project as per the requirements.
 
 (2). Yes if i have better designs, i can make some improvements in designs so that our project will look better as a client                  perspecttive.
