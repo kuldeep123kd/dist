@@ -54,7 +54,8 @@ class Movies extends React.Component {
                 const backimg = post.images["Poster Art"].url;
                 return (
                   <div className="movies" key={key}>
-                      <a href="/dist" style={{ backgroundImage:`url(${backimg})` }}>
+                      <a href="/dist">
+                        <img src={backimg} alt="Movies post img" />
                       </a>
                       <h2>{post.title}</h2>
                   </div>

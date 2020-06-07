@@ -13,17 +13,17 @@ class Footer extends React.Component {
             <div className="footer">
                 <div className="footer-child1">
                     <ul>
-                        <li>Home</li>
+                        <li className="footer-child1-list">Home</li>
                         <li>|</li>
-                        <li>Terms and Conditions</li>
+                        <li className="footer-child1-list">Terms and Conditions</li>
                         <li>|</li>
-                        <li>Privacy Policy</li>
+                        <li className="footer-child1-list">Privacy Policy</li>
                         <li>|</li>
-                        <li>Collection Statement</li>
+                        <li className="footer-child1-list">Collection Statement</li>
                         <li>|</li>
-                        <li>Help</li>
+                        <li className="footer-child1-list">Help</li>
                         <li>|</li>
-                        <li>Manage Account</li>
+                        <li className="footer-child1-list">Manage Account</li>
                     </ul>
                 </div>
                 <div className="footer-child2">

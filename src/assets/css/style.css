@@ -2,6 +2,7 @@
     padding-left: 99px;
     padding-right: 99px;
     background-color: #2F6CE5;
+    z-index: 1;
 }
 .navbar-light .navbar-brand {
     color: #ffffff;
@@ -9,15 +10,25 @@
 .navbar-light .navbar-nav .active>.nav-link {
     color: #ffffff;
 }
+.navbar-light .navbar-brand:hover {
+    color: #ffffff;
+}
 .popular-tiles-child {
     height: 45px;
     background-color: rgba(0,0,0,0.8);
     position: relative;
+    /* z-index: -1; */
 }
 .popular-tiles-child h1 {
     font-size: 1.5rem;
     color: white;
     padding: 0 100px;
+}
+.navbar-light .navbar-toggler {
+    border-color: #ffffff;
+}
+.navbar-toggler {
+    padding: .1rem 0.3rem;
 }
 footer {
     position: fixed;
@@ -54,13 +65,27 @@ footer {
 .series a,
 .movies a {
     width: 150px;
-    height: 250px;
+    height: 230px;
     margin: 10px;
     color: #ffffff;
     font-size: 1.5rem;
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
+}
+.series a img,
+.movies a img {
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+.series a img:hover,
+.movies a img:hover {
+    transform: scale(1.02);
+    box-shadow: 1px 1px 10px 1px rgba(0,0,0,0.5);
 }
 .movies-home a,
 .series-home a {
@@ -124,11 +149,24 @@ footer {
 .footer-child2 p {
     color: #bbbbbb;
 }
+.footer-child1 ul li.footer-child1-list:hover {
+    color: #ffffff;
+}
 .social-icons i {
     font-size: 24px;
     color: #ffffff;
     margin: 10px;
 }
+.social-icons i.fa-facebook:hover {
+    color: #3b5998;
+}
+.social-icons i.fa-twitter:hover {
+    color: #00acee;
+}
+.social-icons i.fa-instagram:hover {
+    color:  #3f729b;
+}
+
 .social-download {
     text-align: right;
 }
@@ -160,7 +198,7 @@ footer {
         padding: 50px 15px;
     }
     .popular-tiles {
-        padding-top: 50px;
+        padding-top: 56px;
     }
     .popular-tiles-child h1 {
         padding: 0 15px;
