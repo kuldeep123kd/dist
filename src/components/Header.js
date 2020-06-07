@@ -15,7 +15,7 @@ class Header extends React.Component {
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav ml-auto">
                         <li className="nav-item active">
-                            <a className="nav-link" href="/">Login</a>
+                            <a className="nav-link" href="/dist">Login</a>
                         </li>
                         <li className="nav-item">
                             <button type="button" className="btn btn-dark">Start your free trial</button>
