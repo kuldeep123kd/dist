@@ -40,6 +40,9 @@ footer {
 .tabs {
     min-height: 415px;
 }
+.tabs-child-home {
+    height: 50vh;
+}
 .tabs-child,
 .tabs-child-home,
 .showerror {
