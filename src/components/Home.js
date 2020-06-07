@@ -12,7 +12,7 @@ class Home extends React.Component {
                     <h1>Popular Titles</h1>
                 </div>
             </div>
-            <div className="tabs-child">
+            <div className="tabs-child-home">
                 <div className="series series-home">
                     <Link to="/series">Series</Link>
                     <h2>Popular Series</h2>

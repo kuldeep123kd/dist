@@ -2,6 +2,12 @@ import $ from "jquery";
 
 $(document).ready(function() {
     autoWinht ();
+    // if($(".tabs-child div").hasClass('series') || $(".tabs-child div").hasClass('movies')) {
+    //     $("footer#footer").css("position",'relative');
+    // }
+    // else {
+    //     $("footer#footer").css("position",'fixed');
+    // }
 });
 $(window).resize(function() {
     autoWinht ();
@@ -10,9 +16,9 @@ $(window).resize(function() {
 function autoWinht () {
     var winht = $(window).height();
     if(winht <= 630) {
-        $("footer").css("position",'unset');
+        $("footer#footer").css("position",'unset');
     }
     else {
-        $("footer").css("position",'fixed');
+        $("footer#footer").css("position",'fixed');
     }
 }

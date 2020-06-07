@@ -12,12 +12,12 @@
 .popular-tiles-child {
     height: 45px;
     background-color: rgba(0,0,0,0.8);
+    position: relative;
 }
 .popular-tiles-child h1 {
     font-size: 1.5rem;
     color: white;
     padding: 0 100px;
-    /* padding-top: 5px; */
 }
 footer {
     position: fixed;
@@ -29,24 +29,35 @@ footer {
 .tabs {
     min-height: 415px;
 }
-.tabs-child {
+.tabs-child,
+.tabs-child-home,
+.showerror {
     margin: 20px 100px;
+}
+/* .tabs-child {
+    text-align: center;
+} */
+.showerror {
+    display: none;
+}
+.showerror,
+.loading {
+    height: 50vh;
 }
 .series,
 .movies {
     display: inline-block;
     text-align: center;
     vertical-align: text-top;
+    margin: 10px 0;
 }
 .series a,
 .movies a {
     width: 150px;
     height: 250px;
-    /* background-color: #000000; */
     margin: 10px;
     color: #ffffff;
     font-size: 1.5rem;
-    /* background-image: url(../images/movie-icon.png); */
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -136,18 +147,23 @@ footer {
 }
 
 @media screen and (max-width: 767px) {
-    .tabs-child {
-        margin: 0 15px;
+    .tabs-child,
+    .tabs-child-home,
+    .showerror {
+        margin: 30px 15px;
+    }
+    .showerror,
+    .loading {
+        margin-top: 50px;
     }
     .footer {
         padding: 50px 15px;
     }
     .popular-tiles {
-        padding-top: 56px;
+        padding-top: 50px;
     }
     .popular-tiles-child h1 {
         padding: 0 15px;
-        /* padding-top: 5px; */
     }
     .navbar {
         padding-left: 15px;
@@ -160,7 +176,8 @@ footer {
         padding-top: 5px;
         min-height: 300px;
     }
-    .navbar {
+    .navbar,
+    .popular-tiles-child {
         position: fixed;
         width: 100%;
     }
@@ -208,10 +225,18 @@ footer {
         width: 120px;
         height: 180px;
     }
+    .series h2, .movies h2 {
+        width: 120px;
+    }
 }
 @media screen and (max-width: 300px) {
-    .navbar {
+    .navbar,
+    .popular-tiles-child {
         position: relative;
+    }
+    .showerror,
+    .loading {
+        margin-top: 30px;
     }
     .popular-tiles {
         padding-top: 0;
@@ -225,6 +250,9 @@ footer {
     .series a, .movies a {
         width: 100px;
         height: 160px;
+    }
+    .series h2, .movies h2 {
+        width: 100px;
     }
     .social-download div {
         flex-direction: column;
@@ -248,6 +276,9 @@ footer {
     .series a, .movies a {
         width: 80px;
         height: 120px;
+    }
+    .series h2, .movies h2 {
+        width: 80px;
     }
     .series h2, .movies h2 {
         font-size: 0.6rem;

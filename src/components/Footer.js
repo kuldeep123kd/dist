@@ -9,7 +9,7 @@ import microsoft from '../assets/images/microsoft.png'
 class Footer extends React.Component {
   render () {
     return ( 
-        <footer>
+        <footer id="footer">
             <div className="footer">
                 <div className="footer-child1">
                     <ul>

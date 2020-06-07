@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import $ from "jquery";
 
 import '../assets/css/style.css';
 import '../assets/css/movies_series.css';
@@ -23,7 +24,11 @@ class Movies extends React.Component {
           isLoading: false
         });
       })
-      .catch(error => this.setState({ error, isLoading: false }));
+      .catch(error => {
+        $('.showerror').text('Oops, something went wrong...'); 
+        $('.showerror').css("display",'block'); 
+        this.setState({ error, isLoading: false })
+      });
   }
 
   componentDidMount() {
@@ -31,7 +36,9 @@ class Movies extends React.Component {
   }
 
   render() {
-    const { isLoading, posts } = this.state;
+    const { isLoading } = this.state;
+    let posts=  this.state.posts.filter(post => post.programType === "movie" && post.releaseYear >= 2010);
+    posts  = posts.slice(0, 21);
     return (
       <React.Fragment>
         <div className="tab">
@@ -40,26 +47,21 @@ class Movies extends React.Component {
                   <h1>Popular Movies</h1>
               </div>
           </div>
+          <div className="showerror"></div>
           <div className="tabs-child">
             {!isLoading ? (
               posts.map((post,key) => {
-                // const {title, programType } = post;
-                if (post.programType === "movie" && post.releaseYear >= 2010) {
-                  const backimg = post.images["Poster Art"].url;
-                  return (
-                    <div className="movies" key={key}>
-                        <a href="/" style={{ backgroundImage:`url(${backimg})` }}>
-                        </a>
-                        <h2>{post.title}</h2>
-                    </div>
-                  );
-                }
-                else {
-                  return null
-                }
+                const backimg = post.images["Poster Art"].url;
+                return (
+                  <div className="movies" key={key}>
+                      <a href="/" style={{ backgroundImage:`url(${backimg})` }}>
+                      </a>
+                      <h2>{post.title}</h2>
+                  </div>
+                );
             })
             ) : (
-              <p>Loading...</p>
+              <p className="loading">Loading...</p>
             )}
           </div>
         </div>
